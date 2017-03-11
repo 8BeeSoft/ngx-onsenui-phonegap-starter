@@ -48,6 +48,15 @@
   dependencies:
     tsickle "^0.2"
 
+"@ngtools/webpack@^1.2.12":
+  version "1.2.12"
+  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-1.2.12.tgz#19142e760a30172806acc7363e590d870cb30c26"
+  dependencies:
+    enhanced-resolve "^3.1.0"
+    loader-utils "^1.0.2"
+    magic-string "^0.19.0"
+    source-map "^0.5.6"
+
 "@types/core-js@^0.9.35":
   version "0.9.35"
   resolved "https://registry.yarnpkg.com/@types/core-js/-/core-js-0.9.35.tgz#444064e63711cdcc62ea844d27642f6efc2285f2"
@@ -3388,6 +3397,12 @@ macaddress@^0.2.8:
   version "0.2.8"
   resolved "https://registry.yarnpkg.com/macaddress/-/macaddress-0.2.8.tgz#5904dc537c39ec6dbefeae902327135fa8511f12"
 
+magic-string@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.19.0.tgz#198948217254e3e0b93080e01146b7c73b2a06b2"
+  dependencies:
+    vlq "^0.2.1"
+
 map-stream@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/map-stream/-/map-stream-0.1.0.tgz#e56aa94c4c8055a16404a0674b78f215f7c8e194"
@@ -6338,6 +6353,10 @@ vhost@~3.0.1:
 viewport-dimensions@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/viewport-dimensions/-/viewport-dimensions-0.2.0.tgz#de740747db5387fd1725f5175e91bac76afdf36c"
+
+vlq@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/vlq/-/vlq-0.2.1.tgz#14439d711891e682535467f8587c5630e4222a6c"
 
 vm-browserify@0.0.4, vm-browserify@~0.0.1:
   version "0.0.4"

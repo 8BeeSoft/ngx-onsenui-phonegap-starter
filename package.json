@@ -5,6 +5,7 @@
   "main": "src/js/app.js",
   "scripts": {
     "build": "webpack -p --progress --env.prod",
+    "build:dev": "webpack --progress",
     "serve": "phonegap serve",
     "platform": "phonegap platform",
     "prepare": "phonegap prepare",
@@ -37,6 +38,7 @@
     "@angular/platform-browser-dynamic": "^2.4.9",
     "@angular/router": "^3.4.9",
     "angular2-onsenui": "^1.0.0-rc.5",
+    "@ngtools/webpack": "^1.2.12",
     "core-js": "^2.4.1",
     "onsenui": "^2.1.0",
     "rxjs": "^5.2.0",
