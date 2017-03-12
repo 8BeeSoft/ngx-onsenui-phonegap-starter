@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const AotPlugin = require('@ngtools/webpack').AotPlugin;
 
 module.exports = (env) => {
   // Build option
@@ -67,7 +66,6 @@ module.exports = (env) => {
     }
   };
 
-
   // Production build
   if (isProd) {
     config.plugins.push(
@@ -84,6 +82,7 @@ module.exports = (env) => {
 
     // AoT
     if (isAot) {
+      const AotPlugin = require('@ngtools/webpack').AotPlugin;
       config.plugins.push(
         new AotPlugin({
           tsConfigPath: './tsconfig.aot.json',
