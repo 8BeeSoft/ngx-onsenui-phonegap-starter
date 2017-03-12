@@ -4,14 +4,15 @@
   "description": "Angular + Onsen UI 2 + Webpack2 + PhoneGap + TypeScript + PostCSS",
   "main": "src/js/app.js",
   "scripts": {
-    "build": "webpack -p --progress --env.prod",
-    "build:dev": "webpack --progress",
+    "build": "webpack --progress --colors",
+    "build:prod": "webpack -p --progress --colors --env.prod",
+    "build:aot": "webpack -p --progress --colors --env.prod --env.aot",
     "serve": "phonegap serve",
     "platform": "phonegap platform",
     "prepare": "phonegap prepare",
-    "preprepare": "npm run build",
+    "preprepare": "npm run build:prod",
     "watch:serve": "npm run serve",
-    "watch:webpack": "webpack --progress --watch",
+    "watch:webpack": "webpack --progress --colors --watch",
     "start": "npm-run-all -p watch:*"
   },
   "keywords": [
@@ -49,7 +50,6 @@
     "@types/node": "^7.0.5",
     "angular2-template-loader": "^0.6.2",
     "awesome-typescript-loader": "^3.0.7",
-    "concurrently": "^3.3.0",
     "css-loader": "^0.26.2",
     "file-loader": "^0.10.1",
     "html-loader": "^0.4.5",
