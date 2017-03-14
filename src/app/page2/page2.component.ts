@@ -3,7 +3,8 @@ import { OnsNavigator, Params } from 'angular2-onsenui';
 
 @Component({
   selector: 'ons-page',
-  templateUrl: 'page2.template.html'
+  styleUrls: ['./page2.component.scss'],
+  templateUrl: './page2.template.html'
 })
 export class Page2Component {
   // タイトル

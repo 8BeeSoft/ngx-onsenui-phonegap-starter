@@ -1,9 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env) => {
-    // Build option
+    // Options
     env = env || {};
     const isAot = env.aot ? true : false;
     const isProd = env.prod ? true : isAot ? true : false;
@@ -17,7 +18,7 @@ module.exports = (env) => {
         },
         output: {
             path: path.join(__dirname, '/www/assets'),
-            filename: '[name].bundle.js',
+            filename: isProd ? '[name].[hash].bundle.js' : '[name].bundle.js',
         },
         devtool: isProd ? false : 'inline-source-map',
         resolve: {
@@ -39,20 +40,26 @@ module.exports = (env) => {
             new webpack.ContextReplacementPlugin(
                 /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
                 path.join(__dirname, './src'), {}
-            )
+            ),
+            new ExtractTextPlugin({
+                filename: isProd ? "style.[hash].bundle.css" : "style.bundle.css",
+                allChunks: true
+            })
         ],
         module: {
             rules: [{
-                test: /\.css$/,
-                include: /node_modules/,
-                use: ['style-loader', 'css-loader', 'postcss-loader']
+                test: /\.(css|scss)$/,
+                exclude: path.join(__dirname, './src/app'),
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader', 'postcss-loader']
+                })
             }, {
                 test: /\.component\.(css|scss)$/,
-                exclude: /node_modules/,
                 use: ['to-string-loader', 'css-loader', 'postcss-loader']
             }, {
                 test: /\.(otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
-                use: ['url-loader']
+                use: ['file-loader']
             }, {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 use: ['url-loader']
@@ -89,15 +96,17 @@ module.exports = (env) => {
         );
         config.module.rules.push({
             test: /\.ts$/,
+            exclude: /node_modules/,
             use: ['@ngtools/webpack']
         });
     }
     else {
         config.module.rules.push({
             test: /\.ts$/,
+            exclude: /node_modules/,
             use: ['awesome-typescript-loader', 'angular2-template-loader']
         });
     }
-    
+
     return config;
 };

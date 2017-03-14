@@ -3,7 +3,7 @@ import {OnsSplitterContent} from 'angular2-onsenui';
 
 @Component({
   selector: 'ons-page',
-  templateUrl: 'sidePage.template.html'
+  templateUrl: './sidePage.template.html'
 })
 export class SidePageComponent {
   // コンストラクタ

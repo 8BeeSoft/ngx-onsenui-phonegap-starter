@@ -5,8 +5,7 @@ import { ContentPageComponent } from '../contentPage/contentPage.component';
 
 @Component({
   selector: 'ons-page',
-  styleUrls: ['page1.component.css'],
-  templateUrl: 'page1.template.html'
+  templateUrl: './page1.template.html'
 })
 export class Page1Component {
   @ViewChild(OnsSplitterContent) content: OnsSplitterContent;
