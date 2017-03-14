@@ -8,6 +8,8 @@ npm-debug.log
 # Cordova
 /platforms
 /plugins
+/www/assets
+/www/index.html
 
 # res
 resources/signing
