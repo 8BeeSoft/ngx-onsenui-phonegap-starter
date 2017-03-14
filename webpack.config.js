@@ -96,7 +96,6 @@ module.exports = (env) => {
         );
         config.module.rules.push({
             test: /\.ts$/,
-            exclude: /node_modules/,
             use: ['@ngtools/webpack']
         });
     }
