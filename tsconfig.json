@@ -1,14 +1,21 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
     "target": "es5",
-    "outDir": "dist",
-    "rootDir": ".",
-    "sourceMap": true,
-    "emitDecoratorMetadata": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "lib": [
+      "es2015",
+      "dom"
+    ],
     "experimentalDecorators": true,
-    "moduleResolution": "node"
+    "emitDecoratorMetadata": true,
+    "sourceMap": true,
+    "noEmit": false,
+    "inlineSources": false
   },
+  "include": [
+    "src/**/*.ts"
+  ],
   "exclude": [
     "node_modules"
   ],

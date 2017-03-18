@@ -1,3 +1,38 @@
+/* テーマカラー */
+$primary-color: #f04829;
+
+/* ボタン */
+.button {
+    background-color: $primary-color;
+    &:active {
+        background-color: $primary-color;
+        opacity: 0.2
+    }
+    &--material {
+        background-color: $primary-color;
+        &:active {
+            background-color: $primary-color;
+            opacity: 0.2
+        }
+    }
+} 
+
+/* ナビゲーションバー */
+.navigation-bar {
+    &--material {
+        background-color: $primary-color;
+    }
+}
+
+/* ツールバーボタン */
+.toolbar-button, .back-button {
+    color: $primary-color;
+    &--material {
+        color: #fff;
+    }
+}
+
+/* スプリッタの横の枠線 */
 ons-splitter-side[mode="split"] {
     border-right: solid 1px #eee;
 }

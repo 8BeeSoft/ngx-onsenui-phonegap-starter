@@ -4,19 +4,19 @@ import { SidePageComponent } from '../sidePage/sidePage.component';
 import { ContentPageComponent } from '../contentPage/contentPage.component';
 
 @Component({
-  selector: 'ons-page',
-  templateUrl: './page1.template.html'
+    selector: 'ons-page',
+    templateUrl: './page1.template.html'
 })
 export class Page1Component {
-  @ViewChild(OnsSplitterContent) content: OnsSplitterContent;
-  @ViewChild(OnsSplitterSide) side: OnsSplitterSide;
+    @ViewChild(OnsSplitterContent) content: OnsSplitterContent;
+    @ViewChild(OnsSplitterSide) side: OnsSplitterSide;
 
-  // ページ
-  sidePage = SidePageComponent;
-  contentPage = ContentPageComponent;
+    // ページ
+    sidePage = SidePageComponent;
+    contentPage = ContentPageComponent;
 
-  // コンストラクタ
-  constructor(private navigator: OnsNavigator, private params: Params) {
-    console.log('params:', params.data);
-  }
+    // コンストラクタ
+    constructor(private navigator: OnsNavigator, private params: Params) {
+        console.log('params:', params.data);
+    }
 }

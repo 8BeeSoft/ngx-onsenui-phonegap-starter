@@ -8,10 +8,10 @@ import { SidePageComponent } from './sidePage/sidePage.component';
 import { ContentPageComponent } from './contentPage/contentPage.component';
 
 @NgModule({
-  imports:         [OnsenModule],
-  declarations:    [AppComponent, Page1Component, Page2Component, SidePageComponent, ContentPageComponent],
-  bootstrap:       [AppComponent],
-  entryComponents: [Page1Component, Page2Component, SidePageComponent, ContentPageComponent],
-  schemas:         [CUSTOM_ELEMENTS_SCHEMA]
+    imports:         [OnsenModule],
+    declarations:    [AppComponent, Page1Component, Page2Component, SidePageComponent, ContentPageComponent],
+    bootstrap:       [AppComponent],
+    entryComponents: [Page1Component, Page2Component, SidePageComponent, ContentPageComponent],
+    schemas:         [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule {}
+export class AppModule { }

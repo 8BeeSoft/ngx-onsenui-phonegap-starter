@@ -1,11 +1,15 @@
+<!-- ツールバー -->
 <ons-toolbar>
     <div class="left">
-      <ons-back-button>Back</ons-back-button>
+        <ons-back-button>Back</ons-back-button>
     </div>
     <div class="center">{{title}}</div>
 </ons-toolbar>
-<div class="content">
+<ons-gesture-detector>
     <div style="text-align: center; margin: 10px">
+        <p>This is the second page.</p>
+
+        <!-- ボタン -->
         <ons-button (click)="pop()">Pop Page</ons-button>
     </div>
-</div>
+</ons-gesture-detector>

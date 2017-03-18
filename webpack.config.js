@@ -58,11 +58,11 @@ module.exports = (env) => {
                 test: /\.component\.(css|scss)$/,
                 use: ['to-string-loader', 'css-loader', 'postcss-loader']
             }, {
-                test: /\.(otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
+                test: /\.(otf|eot|ttf|woff|woff2)(\?.+)?$/,
                 use: ['file-loader']
             }, {
                 test: /\.(jpe?g|png|gif|svg)$/i,
-                use: ['url-loader']
+                use: ['file-loader']
             }, {
                 test: /\.html$/,
                 use: ['html-loader']
