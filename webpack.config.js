@@ -48,11 +48,11 @@ module.exports = (env) => {
         ],
         module: {
             rules: [{
-                test: /\.(css|scss)$/,
-                exclude: path.join(__dirname, './src/app'),
+                test: /\.css$/,
+                include: /node_modules/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: ['css-loader', 'postcss-loader']
+                    use: ['css-loader']
                 })
             }, {
                 test: /\.component\.(css|scss)$/,
