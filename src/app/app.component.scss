@@ -32,6 +32,17 @@ $primary-color: #f04829;
     }
 }
 
+/* タブバー */
+:checked + .tabbar__button {
+    color: $primary-color;
+}
+.tabbar--material {
+    background-color: $primary-color;
+}
+:checked + .tabbar--material__button {
+    color: #fff;
+}
+
 /* スプリッタの横の枠線 */
 ons-splitter-side[mode="split"] {
     border-right: solid 1px #eee;
