@@ -6,13 +6,13 @@ $primary-color: #f04829;
     background-color: $primary-color;
     &:active {
         background-color: $primary-color;
-        opacity: 0.2
+        opacity: 0.2;
     }
     &--material {
         background-color: $primary-color;
         &:active {
             background-color: $primary-color;
-            opacity: 0.2
+            opacity: 0.2;
         }
     }
 } 
