@@ -5,17 +5,17 @@
   "main": "src/js/app.js",
   "scripts": {
     "build": "webpack --progress --colors",
-    "build:prod": "npm run clear && webpack --env=prod --progress --colors",
-    "build:aot": "npm run clear && webpack --env=aot --progress --colors",
+    "build:prod": "npm run clean && webpack --env=prod --progress --colors",
+    "build:aot": "npm run clean && webpack --env=aot --progress --colors",
     "serve": "phonegap serve",
-    "clear": "rimraf ./www/assets/*",
+    "clean": "rimraf ./www/assets/*",
     "platform": "phonegap platform",
     "prepare": "phonegap prepare",
     "preprepare": "npm run build:prod",
     "watch:serve": "npm run serve",
     "watch:webpack": "webpack --progress --colors --watch",
     "start": "npm-run-all -p watch:*",
-    "test": "karma start"
+    "test": "karma start ./config/karma.conf.js"
   },
   "keywords": [
     "Angular",
@@ -41,18 +41,17 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "angular2-onsenui": "^1.0.0-rc.6",
-    "@ngtools/webpack": "^1.3.0",
     "core-js": "^2.4.1",
     "onsenui": "^2.2.0",
     "rxjs": "^5.2.0",
     "zone.js": "^0.8.5"
   },
   "devDependencies": {
+    "@ngtools/webpack": "^1.3.0",
     "@types/core-js": "^0.9.37",
     "@types/jasmine": "^2.5.46",
     "@types/node": "^7.0.8",
     "angular2-template-loader": "^0.6.2",
-    "ava": "^0.18.2",
     "awesome-typescript-loader": "^3.1.2",
     "css-loader": "^0.27.3",
     "extract-text-webpack-plugin": "^2.1.0",
@@ -79,10 +78,10 @@
     "postcss-simple-vars": "^3.0.0",
     "postcss-url": "^5.1.2",
     "rimraf": "^2.6.1",
-    "style-loader": "^0.14.1",
+    "style-loader": "^0.16.0",
     "to-string-loader": "^1.1.5",
     "typescript": "^2.2.1",
     "url-loader": "^0.5.8",
-    "webpack": "^2.2.1"
+    "webpack": "^2.3.2"
   }
 }
