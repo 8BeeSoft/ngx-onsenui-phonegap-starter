@@ -18,5 +18,12 @@ export class Page1Component {
   // コンストラクタ
   constructor(private navigator: OnsNavigator, private params: Params) {
     console.log('params:', params.data);
+
+    // 向き変更時のバグ対策
+    ons.orientation.on('change', (event) => {
+      if (!event.isPortrait && this.side.element.isOpen) {
+        this.side.element.close();
+      }
+    });
   }
 }

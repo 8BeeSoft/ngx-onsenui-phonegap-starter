@@ -1,0 +1,19 @@
+/* ボタンの色変更 */
+$color-blue: #2196F3;
+
+.button {
+  background-color: $color-blue;
+}
+
+.toolbar {
+    &--material {
+        background-color: $color-blue;
+    }
+}
+
+.toolbar-button {
+    color: $color-blue;
+    &--material {
+        color: #fff;
+    }
+}
