@@ -32,10 +32,10 @@ module.exports = (env) => {
         /angular(\\|\/)core(\\|\/)@angular/,
         helpers.root('src'), {}
       ),
-      new webpack.LoaderOptionsPlugin({
-        minimize: true,
-        debug: false
-      }),
+      // new webpack.LoaderOptionsPlugin({
+      //   minimize: true,
+      //   debug: false
+      // }),
       new webpack.optimize.UglifyJsPlugin({
         output: {
           comments: false,
