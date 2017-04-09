@@ -9,7 +9,7 @@ module.exports = (env) => {
     entry: {
       'polyfills': './src/polyfills.ts',
       'vendor': './src/vendor.ts',
-      'app': './src/main.ts',
+      'app': ['./src/style.scss', './src/main.ts'],
     },
     output: {
       path: helpers.root('www', 'assets'),
@@ -46,17 +46,24 @@ module.exports = (env) => {
         test: /\.html$/,
         use: ['html-loader']
       }, {
-        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+        test: /\.(woff|woff2|ttf|eot|ico)$/,
         use: ['file-loader']
       }, {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: ['url-loader']
+      }, {
         test: /\.css$/,
-        exclude: helpers.root('src', 'app'),
+        exclude: helpers.root('src','app'),
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader']
+          use: ['css-loader', 'postcss-loader']
         })
       }, {
-        test: /\.(s?css)$/,
+        test: /\.scss$/,
+        exclude: helpers.root('src','app'),
+        use: ['style-loader', 'css-loader', 'postcss-loader']
+      }, {
+        test: /\.component.(s?css)$/,
         include: helpers.root('src', 'app'),
         use: ['to-string-loader', 'css-loader', 'postcss-loader']
       }]

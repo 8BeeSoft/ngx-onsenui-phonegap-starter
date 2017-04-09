@@ -4,6 +4,7 @@ import { Page3Component } from '../page3/page3.component';
 
 @Component({
   selector: 'ons-page',
+  styleUrls: ['./tab1.component.scss'],
   templateUrl: './tab1.template.html'
 })
 export class Tab1Component {

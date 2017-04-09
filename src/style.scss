@@ -1,0 +1,62 @@
+/* テーマカラー */
+$primary-color: #f04829;
+
+/* ボタン */
+.button {
+    background-color: $primary-color;
+    &:active {
+        background-color: $primary-color;
+        opacity: 0.2;
+    }
+    &--material {
+        background-color: $primary-color;
+        &:active {
+            background-color: $primary-color;
+            opacity: 0.2;
+        }
+    }
+} 
+
+/* ナビゲーションバー */
+.toolbar {
+    &--material {
+        background-color: $primary-color;
+    }
+}
+
+/* ツールバーボタン */
+.toolbar-button, .back-button {
+    color: $primary-color;
+    &--material {
+        color: #fff;
+    }
+}
+
+/* タブバー */
+:checked + .tabbar__button {
+    color: $primary-color;
+}
+.tabbar--material {
+    background-color: $primary-color;
+}
+:checked + .tabbar--material__button {
+    color: #fff;
+}
+
+/* FAB */
+.fab {
+    background-color: $primary-color;
+    &--bottom {
+        &__right {
+            position: absolute;
+        }
+    }
+    &:active {
+        background-color: $primary-color;
+    }
+}
+
+/* スプリッタの横の枠線 */
+ons-splitter-side[mode="split"] {
+    border-right: solid 1px #eee;
+}

@@ -5,6 +5,7 @@ import { ContentPageComponent } from '../contentPage/contentPage.component';
 
 @Component({
   selector: 'ons-page',
+  styleUrls: ['./page1.component.scss'],
   templateUrl: './page1.template.html'
 })
 export class Page1Component {

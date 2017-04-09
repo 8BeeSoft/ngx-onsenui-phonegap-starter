@@ -4,6 +4,7 @@ import { Page1Component } from '../page1/page1.component';
 
 @Component({
   selector: 'ons-page',
+  styleUrls: ['./sidePage.component.scss'],
   templateUrl: './sidePage.template.html'
 })
 export class SidePageComponent {
