@@ -16,6 +16,8 @@ cache: yarn
 before_install:
 
 install:
+  - yarn
+  - yarn run platform add browser
 
 before_script:
 
