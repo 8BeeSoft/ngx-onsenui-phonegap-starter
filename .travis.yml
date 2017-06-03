@@ -23,7 +23,8 @@ install:
   - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
 
 before_script:
+  - yarn install
 
 script:
-  yarn install
-  yarn test
+  - yarn build
+  - yarn test
