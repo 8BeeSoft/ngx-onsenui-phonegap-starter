@@ -25,9 +25,7 @@ module.exports = (env) => {
 
   // PostCSS設定
   const postcssPlugins = () => {
-    return {
-      autoprefixer
-    }
+    autoprefixer
   }
 
   // ビルド設定
