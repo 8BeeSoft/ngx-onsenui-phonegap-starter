@@ -25,3 +25,4 @@ install:
 before_script:
 
 script:
+  yarn install
