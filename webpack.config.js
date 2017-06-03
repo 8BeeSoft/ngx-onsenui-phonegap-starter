@@ -12,14 +12,14 @@ module.exports = (env) => {
     }),
     new HtmlWebpackPlugin({
       template: path.join(process.cwd(), './src/index.html'),
-      filename: path.join(__dirname, './www/index.html'),
+      filename: path.join(process.cwd(), './www/index.html'),
     }),
     new webpack.ProvidePlugin({
       ons: 'onsenui',
     }),
     new webpack.ContextReplacementPlugin(
       /angular(\\|\/)core(\\|\/)@angular/,
-      path.join(process.cwd(), "src"), {}
+      path.join(process.cwd(), './src'), {}
     ),
   ];
 
@@ -31,29 +31,24 @@ module.exports = (env) => {
   // ビルド設定
   const config = {
     entry: {
-      main: [
-        "./src/main.ts"
-      ],
-      polyfills: [
-        "./src/polyfills.ts"
-      ],
-      styles: [
-        "./src/styles.scss"
-      ]
+      'main': ['./src/main.ts'],
+      'polyfills': ['./src/polyfills.ts'],
+      'styles': ['./src/styles.scss'],
     },
     output: {
-      path: path.join(process.cwd(), "www"),
-      filename: "[name].bundle.js",
-      chunkFilename: "[id].chunk.js"
+      path: path.join(process.cwd(), 'www'),
+      filename: '[name].bundle.js',
+      chunkFilename: '[id].chunk.js'
     },
     devtool: 'inline-source-map',
     resolve: {
-      extensions: [".ts", ".js"],
+      extensions: ['.ts', '.js'],
     },
+    plugins: plugins,
     module: {
       rules: [
         {
-          include: path.join(process.cwd(), "src/styles.scss"),
+          include: path.join(process.cwd(), './src/styles.scss'),
           test: /\.scss$/,
           use: [
             'style-loader',
@@ -67,7 +62,7 @@ module.exports = (env) => {
             'sass-loader'
           ]
         }, {
-          exclude: path.join(process.cwd(), "src/styles.scss"),
+          exclude: path.join(process.cwd(), './src/styles.scss'),
           test: /\.scss$/,
           use: [
             'to-string-loader',
@@ -94,8 +89,7 @@ module.exports = (env) => {
           use: ['awesome-typescript-loader', 'angular2-template-loader']
         },
       ]
-    },
-    plugins: plugins
+    }
   }
 
   return config;
