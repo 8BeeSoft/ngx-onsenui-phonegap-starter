@@ -1,18 +1,27 @@
+import { TestBed, async } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { OnsenModule } from 'angular2-onsenui';
-import { NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
-describe('App', () => {
-  beforeEach(() => {
+describe('AppComponent', () => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AppComponent],
-      imports: [OnsenModule],
-    });
-  });
-  it ('should work', () => {
-    let fixture = TestBed.createComponent(AppComponent);
-    expect(fixture.componentInstance instanceof AppComponent).toBe(true, 'should create AppComponent');
-  });
+      imports: [
+        RouterTestingModule,
+        OnsenModule
+      ],
+      declarations: [
+        AppComponent
+      ],
+
+    }).compileComponents();
+  }));
+
+  it('should create the app', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
+  }));
+
 });

@@ -1,32 +1,20 @@
-import { Component, ViewChild } from '@angular/core';
-import { OnsNavigator, Params, ElementRef } from 'angular2-onsenui';
-import { Tab1Component } from '../tab1/tab1.component';
-import { Tab2Component } from '../tab2/tab2.component';
+import { Component, OnInit } from '@angular/core';
+import { OnsNavigator, Params } from 'angular2-onsenui';
 
 @Component({
-  selector: 'ons-page',
-  styleUrls: ['./page2.component.scss'],
-  templateUrl: './page2.template.html'
+  selector: 'ons-page[page2]',
+  templateUrl: './page2.component.html',
+  styleUrls: ['./page2.component.scss']
 })
-export class Page2Component {
-  // タイトル
-  title = null;
+export class Page2Component implements OnInit {
 
-  // タブ
-  tab1 = Tab1Component;
-  tab2 = Tab2Component;
+  constructor(private navi: OnsNavigator, private params: Params) { }
 
-  // コンストラクタ
-  constructor(private navigator: OnsNavigator, private params: Params, elementRef: ElementRef) {
-    console.log('params:', params.data);
-    this.title = params.data.title;
-
-    // スワイプで戻る
-    elementRef.nativeElement.addEventListener('swiperight', () => this.pop());
-  }
-
-  // 戻る
   pop() {
-    this.navigator.element.popPage();
+    this.navi.element.popPage();
   }
+
+  ngOnInit() {
+  }
+
 }

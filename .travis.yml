@@ -21,4 +21,3 @@ before_script:
 
 script:
   - yarn run build
-  - yarn run test

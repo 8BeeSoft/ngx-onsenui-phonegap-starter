@@ -3,7 +3,7 @@
 [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
 # Angular + Onsen UI 2 + Webpack2 + PhoneGap
 
-[PhoneGap](http://phonegap.com/) を使ったハイブリッドアプリのひな形に [Webpack](https://webpack.github.io/) による SCSS/cssnext と TypeScript のトランスパイルを組み込んだもの。
+[PhoneGap](http://phonegap.com/) を使ったハイブリッドアプリのひな形に [Webpack](https://webpack.github.io/) による SCSS と TypeScript のトランスパイルを組み込んだもの。
 
 ビルドツールは npm と Webpack のみ。
 
@@ -21,7 +21,7 @@ $ git clone https://github.com/puku0x/angular-onsenui2-webpack2.git
 依存パッケージをインストール
 ```
 $ cd クローン先のディレクトリ
-$ npm i
+$ npm install
 ```
 
 ビルド & プレビュー
@@ -32,16 +32,15 @@ $ npm start
 
 ビルド後、ブラウザで `http://localhost:3000` を開くとプレビューされます。
 
-`/src`内または、`/www`内のファイルに変更を加えると自動的にリロードされます。
+`/src` 内のファイルに変更を加えると自動的にリロードされます。
 
 ## AoT(Ahead of Time)コンパイル
 本サンプルはAngularのAoTコンパイルに対応しています。
 
 下記コマンドを実行するとAoTコンパイル済みのバンドルが出力されます。
 ```
-$ npm run build:aot
+$ npm run ng build --prod
 ```
-
 
 [travis-ci-url]: http://travis-ci.org/puku0x/angular-onsenui2-webpack2
 [travis-ci-image]: https://travis-ci.org/puku0x/angular-onsenui2-webpack2.svg?branch=master

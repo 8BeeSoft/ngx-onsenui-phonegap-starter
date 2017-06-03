@@ -1,30 +1,21 @@
-import { Component, ViewChild } from '@angular/core';
-import { OnsNavigator, Params, OnsSplitterContent, OnsSplitterSide } from 'angular2-onsenui';
-import { SidePageComponent } from '../sidePage/sidePage.component';
-import { ContentPageComponent } from '../contentPage/contentPage.component';
+import { Component, OnInit } from '@angular/core';
+import { OnsNavigator, Params } from 'angular2-onsenui';
+import { Page2Component } from '../page2/page2.component';
 
 @Component({
-  selector: 'ons-page',
-  styleUrls: ['./page1.component.scss'],
-  templateUrl: './page1.template.html'
+  selector: 'ons-page[page1]',
+  templateUrl: './page1.component.html',
+  styleUrls: ['./page1.component.scss']
 })
-export class Page1Component {
-  @ViewChild(OnsSplitterContent) content: OnsSplitterContent;
-  @ViewChild(OnsSplitterSide) side: OnsSplitterSide;
+export class Page1Component implements OnInit {
 
-  // ページ
-  sidePage = SidePageComponent;
-  contentPage = ContentPageComponent;
+  constructor(private navi: OnsNavigator, private params: Params) { }
 
-  // コンストラクタ
-  constructor(private navigator: OnsNavigator, private params: Params) {
-    console.log('params:', params.data);
-
-    // 向き変更時のバグ対策
-    ons.orientation.on('change', (event) => {
-      if (!event.isPortrait && this.side.element.isOpen) {
-        this.side.element.close();
-      }
-    });
+  push() {
+    this.navi.element.pushPage(Page2Component);
   }
+
+  ngOnInit() {
+  }
+
 }

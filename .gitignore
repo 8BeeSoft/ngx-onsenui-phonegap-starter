@@ -1,20 +1,43 @@
-# Mac
-.DS_Store
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Node
-npm-debug.log
+# compiled output
+/plugins
+/platforms
+/tmp
+/out-tsc
+
+# dependencies
 /node_modules
 
-# Cordova
-/platforms
-/plugins
-/www/assets
-/www/index.html
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-# res
-resources/signing
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
-# VS Code
-.vscode
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
 /typings
-jsconfig.json
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db

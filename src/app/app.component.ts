@@ -1,11 +1,11 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 import { Page1Component } from './page1/page1.component';
 
 @Component({
-  selector: 'my-app',
-  styleUrls: ['./app.component.scss'],
-  template: '<ons-navigator [page]="page"></ons-navigator>',
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  page = Page1Component;
+  rootPage = Page1Component;
 }
