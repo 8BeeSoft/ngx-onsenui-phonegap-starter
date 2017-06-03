@@ -1,13 +1,13 @@
 [![Build Status][travis-ci-image]][travis-ci-url]
 [![Dependency status][david-dm-image]][david-dm-url]
 [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
-# Angular + Onsen UI 2 + Webpack2 + PhoneGap
+# Angular + Onsen UI 2 + Webpack + PhoneGap
 
-[PhoneGap](http://phonegap.com/) を使ったハイブリッドアプリのひな形に [Webpack](https://webpack.github.io/) による SCSS と TypeScript のトランスパイルを組み込んだもの。
-
-ビルドツールは npm と Webpack のみ。
+[Angular CLI](https://cli.angular.io/) と [PhoneGap](http://phonegap.com/) を使ったハイブリッドアプリのサンプルです。
 
 フロントエンドのフレームワークは [Angular](https://angular.io/) と [Onsen UI 2](https://onsen.io/) を採用しています。
+
+また、Angular CLIの `ng serve` コマンドを使った場合に [「Phonegap Developer」アプリ](http://docs.phonegap.com/getting-started/2-install-mobile-app/) が利用できなくなる問題を解決するため、別途 [Webpack](https://webpack.github.io/) による SCSS と TypeScript のトランスパイルを組み込んでいます。
 
 ## 必要なもの
 - [Node.js](https://nodejs.org/)
@@ -39,7 +39,7 @@ $ npm start
 
 下記コマンドを実行するとAoTコンパイル済みのバンドルが出力されます。
 ```
-$ npm run ng build --prod
+$ npm run build:prod
 ```
 
 [travis-ci-url]: http://travis-ci.org/puku0x/angular-onsenui2-webpack2
