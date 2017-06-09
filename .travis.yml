@@ -13,7 +13,10 @@ cache: yarn
 
 addons:
   apt:
+    sources:
+      - google-chrome
     packages:
+      - google-chrome-stable
       - xvfb
 
 before_install:
