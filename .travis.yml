@@ -27,4 +27,5 @@ before_script:
 
 script:
   - yarn test
+  - yarn e2e
   - yarn build:prod

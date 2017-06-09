@@ -1,6 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { OnsenModule } from 'angular2-onsenui';
+import { OnsenModule } from 'ngx-onsenui';
 
 import { AppComponent } from './app.component';
 
