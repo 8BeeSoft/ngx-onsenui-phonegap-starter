@@ -17,13 +17,10 @@ addons:
       - google-chrome
     packages:
       - google-chrome-stable
-      - xvfb
 
 before_install:
 
 install:
-  - export DISPLAY=':99.0'
-  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
 
 before_script:
   - yarn install
