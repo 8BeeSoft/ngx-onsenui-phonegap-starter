@@ -11,24 +11,21 @@ describe('page2', () => {
     browser.sleep(1000);
   });
 
-  it('should display title', done => {
-    page.getPage2TitleText()
-      .then(msg => expect(msg).toEqual('Page 2'))
-      .then(done, done.fail);
+  it('should display title', async() => {
+    const text = await page.getPage2TitleText();
+    await expect(text).toEqual('Page 2');
   });
 
-  it('should display message', done => {
-    page.getPage2ParagraphText()
-      .then(msg => expect(msg).toEqual('This is the second page.'))
-      .then(done, done.fail);
+  it('should display message', async () => {
+    const text = await page.getPage2ParagraphText();
+    await expect(text).toEqual('This is the second page.');
   });
 
-  it('should pop page', done => {
+  it('should pop page', async () => {
     page.getPage2Button().click();
-    setTimeout(() => {
-      page.getPage1TitleText()
-        .then(text => expect(text).toEqual('Page 1'))
-        .then(done, done.fail);
+    setTimeout(async () => {
+      const text = await page.getPage1TitleText();
+      await expect(text).toEqual('Page 1');
     }, 1000);
   });
 

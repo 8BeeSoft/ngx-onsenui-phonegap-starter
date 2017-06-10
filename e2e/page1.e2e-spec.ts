@@ -5,27 +5,24 @@ describe('page1', () => {
 
   beforeEach(() => {
     page = new AppPage();
-    page.navigateTo()
+    page.navigateTo();
   });
 
-  it('should display title', done => {
-    page.getPage1TitleText()
-      .then(msg => expect(msg).toEqual('Page 1'))
-      .then(done, done.fail);
+  it('should display title', async () => {
+    const text = await page.getPage1TitleText();
+    await expect(text).toEqual('Page 1');
   });
 
-  it('should display message', done => {
-    page.getPage1ParagraphText()
-      .then(msg => expect(msg).toEqual('This is the first page.'))
-      .then(done, done.fail);
+  it('should display message', async () => {
+    const text = await page.getPage1ParagraphText();
+    await expect(text).toEqual('This is the first page.');
   });
 
-  it('should push page', done => {
+  it('should push page', async () => {
     page.getPage1Button().click();
-    setTimeout(() => {
-      page.getPage2TitleText()
-        .then(text => expect(text).toEqual('Page 2'))
-        .then(done, done.fail);
+    setTimeout(async () => {
+      const text = await page.getPage2TitleText();
+      await expect(text).toEqual('Page 2');
     }, 1000);
   });
 

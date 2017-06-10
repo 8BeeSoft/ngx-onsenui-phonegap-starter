@@ -8,10 +8,9 @@ describe('app', () => {
     page.navigateTo();
   });
 
-  it('should display ons-navigator', done => {
-    page.getOnsNavigator()
-      .then(navi => expect(navi).toBe(true))
-      .then(done, done.fail);
+  it('should display ons-navigator', async () => {
+    const navi = await page.getOnsNavigator();
+    await expect(navi).toBe(true);
   });
 
 });
