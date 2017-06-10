@@ -23,10 +23,9 @@ describe('page2', () => {
 
   it('should pop page', async () => {
     page.getPage2Button().click();
-    setTimeout(async () => {
-      const text = await page.getPage1TitleText();
-      await expect(text).toEqual('Page 1');
-    }, 1000);
+    browser.sleep(1000);
+    const text = await page.getPage1TitleText();
+    await expect(text).toEqual('Page 1');
   });
 
 });

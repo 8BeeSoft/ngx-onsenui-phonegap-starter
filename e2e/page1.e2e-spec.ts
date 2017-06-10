@@ -1,4 +1,5 @@
 import { AppPage } from './app.po';
+import { browser } from 'protractor';
 
 describe('page1', () => {
   let page: AppPage;
@@ -20,10 +21,8 @@ describe('page1', () => {
 
   it('should push page', async () => {
     page.getPage1Button().click();
-    setTimeout(async () => {
-      const text = await page.getPage2TitleText();
-      await expect(text).toEqual('Page 2');
-    }, 1000);
+    browser.sleep(1000);
+    const text = await page.getPage2TitleText();
+    await expect(text).toEqual('Page 2');
   });
-
 });
