@@ -1,11 +1,11 @@
-import { MyAppPage } from './app.po';
+import { AppPage } from './app.po';
 import { browser } from 'protractor';
 
 describe('page2', () => {
-  let page: MyAppPage;
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new MyAppPage();
+    page = new AppPage();
     page.navigateTo();
     page.getPage1Button().click();
     browser.sleep(1000);

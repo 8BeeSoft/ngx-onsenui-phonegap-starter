@@ -1,10 +1,10 @@
-import { MyAppPage } from './app.po';
+import { AppPage } from './app.po';
 
 describe('page1', () => {
-  let page: MyAppPage;
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new MyAppPage();
+    page = new AppPage();
     page.navigateTo()
   });
 
