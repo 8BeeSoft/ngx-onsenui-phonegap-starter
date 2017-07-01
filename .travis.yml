@@ -7,9 +7,9 @@ node_js:
   - "7"
   - node
 
-dist: trusty
-
-cache: yarn
+cache:
+  directories:
+    - node_modules
 
 addons:
   apt:
@@ -18,16 +18,15 @@ addons:
     packages:
       - google-chrome-stable
 
-before_install:
-  - yarn global add @angular/cli
-  - yarn global add angular-cli-ghpages
-
-install:
-
-before_script:
-
 script:
   - yarn test
   - yarn e2e
   - ng build --prod --aot --base-href="https://puku0x.github.io/angular-onsenui2-webpack2/"
-  - angular-cli-ghpages --dir="www" --repo="https://GH_TOKEN@puku0x.github.io/angular-onsenui2-webpack2.git" --name="build bot" --email="puku0x@gmail.com"
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: www
+  on:
+    branch: master
