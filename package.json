@@ -9,7 +9,7 @@
     "watch:serve": "phonegap serve",
     "watch:webpack": "webpack --progress --colors --watch",
     "build": "ng build",
-    "build:prod": "ng build --prod --aot --base-href=\"https://puku0x.github.io/ngx-onsenui-phonegap-starter/\"",
+    "build:prod": "ng build --prod --base-href=\"https://puku0x.github.io/ngx-onsenui-phonegap-starter/\"",
     "test": "ng test --single-run",
     "lint": "ng lint",
     "e2e": "ng e2e"
