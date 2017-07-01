@@ -75,7 +75,7 @@ module.exports = (env) => {
           ]
         }, {
           test: /\.html$/,
-          use: ['raw-loader']
+          use: ['html-loader']
         }, {
           test: /\.(eot|svg)$/,
           use: ['file-loader?name=[name].[ext]']
