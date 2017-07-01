@@ -23,9 +23,12 @@ before_install:
 install:
 
 before_script:
+  - yarn global add @angular/cli
+  - yarn global add angular-cli-ghpages
   - yarn install
 
 script:
   - yarn test
   - yarn e2e
-  - yarn build:prod
+  - ng build --prod --aot --base-href="https://puku0x.github.io/angular-onsenui2-webpack2/"
+  - angular-cli-ghpages --dir="www"
