@@ -29,5 +29,5 @@ before_script:
 script:
   - yarn test
   - yarn e2e
-  - ng build --prod --aot --base-href="https://puku0x.github.io/angular-onsenui2-webpack2/"
+  - ng build --prod --aot --output-path="dist" --base-href="https://puku0x.github.io/angular-onsenui2-webpack2/"
   - angular-cli-ghpages --repo=https://GH_TOKEN@puku0x.github.io/angular-onsenui2-webpack2.git --name="puku0x" --email=puku0x@gmail.com
