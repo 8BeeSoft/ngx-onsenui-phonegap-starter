@@ -62,11 +62,9 @@ module.exports = (env) => {
             'sass-loader'
           ]
         }, {
-          exclude: path.join(process.cwd(), './src/styles.scss'),
-          test: /\.scss$/,
+          test: /\.component\.scss$/,
           use: [
-            'to-string-loader',
-            'css-loader',
+            'raw-loader',
             {
               loader: 'postcss-loader',
               options: {
@@ -77,13 +75,13 @@ module.exports = (env) => {
           ]
         }, {
           test: /\.html$/,
-          use: ['html-loader']
+          use: ['raw-loader']
         }, {
-          "test": /\.(eot|svg)$/,
-          "loader": "file-loader?name=[name].[ext]"
+          test: /\.(eot|svg)$/,
+          use: ['file-loader?name=[name].[ext]']
         }, {
-          "test": /\.(jpg|png|gif|otf|ttf|woff|woff2|cur|ani)$/,
-          "loader": "url-loader?name=[name].[ext]"
+          test: /\.(jpg|png|gif|otf|ttf|woff|woff2|cur|ani)$/,
+          use: ['url-loader?name=[name].[ext]']
         }, {
           test: /\.ts$/,
           use: ['awesome-typescript-loader', 'angular2-template-loader']
