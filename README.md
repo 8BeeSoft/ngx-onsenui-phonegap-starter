@@ -1,7 +1,7 @@
 [![Build Status][travis-ci-image]][travis-ci-url]
 [![Dependency status][david-dm-image]][david-dm-url]
 [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
-# Angular + Onsen UI 2 + Webpack + PhoneGap
+# Angular + Onsen UI 2 + PhoneGap Starter
 
 [Angular CLI](https://cli.angular.io/) と [PhoneGap](http://phonegap.com/) を使ったハイブリッドアプリのサンプルです。
 
@@ -15,7 +15,7 @@
 ## 使い方
 リポジトリをクローン
 ```
-$ git clone https://github.com/puku0x/angular-onsenui2-webpack2.git
+$ git clone https://github.com/puku0x/ngx-onsenui-phonegap-starter.git
 ```
 
 依存パッケージをインストール
@@ -34,17 +34,10 @@ $ npm start
 
 `/src` 内のファイルに変更を加えると自動的にリロードされます。
 
-## AoT(Ahead of Time)コンパイル
-本サンプルはAngularのAoTコンパイルに対応しています。
 
-下記コマンドを実行するとAoTコンパイル済みのバンドルが出力されます。
-```
-$ npm run build:prod
-```
-
-[travis-ci-url]: http://travis-ci.org/puku0x/angular-onsenui2-webpack2
-[travis-ci-image]: https://travis-ci.org/puku0x/angular-onsenui2-webpack2.svg?branch=master
-[david-dm-url]:https://david-dm.org/puku0x/angular-onsenui2-webpack2
-[david-dm-image]:https://david-dm.org/puku0x/angular-onsenui2-webpack2.svg
-[david-dm-dev-url]:https://david-dm.org/puku0x/angular-onsenui2-webpack2?type=dev
-[david-dm-dev-image]:https://david-dm.org/puku0x/angular-onsenui2-webpack2/dev-status.svg
+[travis-ci-url]: http://travis-ci.org/puku0x/ngx-onsenui-phonegap-starter
+[travis-ci-image]: https://travis-ci.org/puku0x/ngx-onsenui-phonegap-starter.svg?branch=master
+[david-dm-url]:https://david-dm.org/puku0x/ngx-onsenui-phonegap-starter
+[david-dm-image]:https://david-dm.org/puku0x/angx-onsenui-phonegap-starter.svg
+[david-dm-dev-url]:https://david-dm.org/puku0x/ngx-onsenui-phonegap-starter?type=dev
+[david-dm-dev-image]:https://david-dm.org/puku0x/ngx-onsenui-phonegap-starter/dev-status.svg

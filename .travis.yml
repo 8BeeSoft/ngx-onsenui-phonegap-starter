@@ -20,10 +20,15 @@ addons:
     packages:
       - google-chrome-stable
 
+before_install:
+  - npm install -g @angular/cli
+  - npm install -g phonegap
+  - npm install -g webpack
+
 script:
-  - yarn test
-  - yarn e2e
-  - ng build --prod --aot --base-href="https://puku0x.github.io/angular-onsenui2-webpack2/"
+  - npm run test
+  - npm run e2e
+  - npm run build:prod
 
 deploy:
   provider: pages

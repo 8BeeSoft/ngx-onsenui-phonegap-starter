@@ -4,17 +4,15 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "phonegap": "phonegap",
-    "webpack": "webpack",
+    "prestart": "webpack",
     "start": "npm-run-all -p watch:*",
-    "prestart": "npm run webpack",
+    "watch:serve": "phonegap serve",
+    "watch:webpack": "webpack --progress --colors --watch",
     "build": "ng build",
-    "build:prod": "ng build --prod --aot",
+    "build:prod": "ng build --prod --aot --base-href=\"https://puku0x.github.io/ngx-onsenui-phonegap-starter/\"",
     "test": "ng test --single-run",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "watch:serve": "phonegap serve",
-    "watch:webpack": "webpack --progress --colors --watch"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
