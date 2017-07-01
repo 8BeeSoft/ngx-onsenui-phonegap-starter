@@ -38,6 +38,6 @@ $ npm start
 [travis-ci-url]: http://travis-ci.org/puku0x/ngx-onsenui-phonegap-starter
 [travis-ci-image]: https://travis-ci.org/puku0x/ngx-onsenui-phonegap-starter.svg?branch=master
 [david-dm-url]:https://david-dm.org/puku0x/ngx-onsenui-phonegap-starter
-[david-dm-image]:https://david-dm.org/puku0x/angx-onsenui-phonegap-starter.svg
+[david-dm-image]:https://david-dm.org/puku0x/ngx-onsenui-phonegap-starter.svg
 [david-dm-dev-url]:https://david-dm.org/puku0x/ngx-onsenui-phonegap-starter?type=dev
 [david-dm-dev-image]:https://david-dm.org/puku0x/ngx-onsenui-phonegap-starter/dev-status.svg
