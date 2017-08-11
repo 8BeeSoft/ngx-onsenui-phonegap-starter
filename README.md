@@ -7,7 +7,7 @@
 
 フロントエンドのフレームワークは [Angular](https://angular.io/) と [Onsen UI 2](https://onsen.io/) を採用しています。
 
-また、Angular CLI の `ng serve` コマンドを使った場合に [「Phonegap Developer」アプリ](http://docs.phonegap.com/getting-started/2-install-mobile-app/) が利用できなくなる問題を解決するため、別途 [Webpack](https://webpack.github.io/) による SCSS と TypeScript のトランスパイルを組み込んでいます。
+また、Angular CLI の `ng serve` コマンドを使った場合に [「Phonegap Developer」](http://docs.phonegap.com/getting-started/2-install-mobile-app/) アプリが利用できなくなる問題を解決するため、別途 [Webpack](https://webpack.github.io/) による SCSS と TypeScript のトランスパイルを組み込んでいます。
 
 ## 必要なもの
 - [Node.js](https://nodejs.org/)
@@ -49,7 +49,7 @@ $ ng serve
 
 ビルド後、ブラウザで `http://localhost:4200` を開くとプレビューされます。
 
-`/src` 内のファイルに変更を加えると自動的にリロード（HMR）されます。
+`/src` 内のファイルに変更を加えるとモジュール単位で自動リロード（HMR）されます。
 
 
 ## プロダクションビルド

@@ -31,8 +31,7 @@ module.exports = (env) => {
   // ビルド設定
   const config = {
     entry: {
-      'main': ['./src/main.ts'],
-      'polyfills': ['./src/polyfills.ts'],
+      'main': ['./src/polyfills.ts', './src/main.ts'],
       'styles': ['./src/styles.scss'],
     },
     output: {
