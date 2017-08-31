@@ -1,28 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { OnsenModule } from 'ngx-onsenui';
 
-import { Page1Module } from './page1/page1.module';
-import { Page2Module } from './page2/page2.module';
-
 import { AppComponent } from './app.component';
+import { Page1Component } from './page1/page1.component';
+import { Page2Component } from './page2/page2.component';
+
+// Page components
+const pages = [ Page1Component, Page2Component ];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ...pages
+  ],
+  entryComponents: [
+    ...pages
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     HttpClientModule,
     OnsenModule,
-    Page1Module,
-    Page2Module
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  bootstrap: [ AppComponent ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }
