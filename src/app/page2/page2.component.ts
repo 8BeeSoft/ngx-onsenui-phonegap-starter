@@ -10,11 +10,11 @@ export class Page2Component implements OnInit {
 
   constructor(private navi: OnsNavigator, private params: Params) { }
 
-  pop() {
-    this.navi.element.popPage();
+  ngOnInit() {
   }
 
-  ngOnInit() {
+  pop() {
+    this.navi.element.popPage();
   }
 
 }
